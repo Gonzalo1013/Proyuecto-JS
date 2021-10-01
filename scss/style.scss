@@ -1,0 +1,155 @@
+body {
+    background-color: black;
+    color: white;
+    //-----------------------HEADER STYLES
+    header{
+        .title{
+            display: flex;
+            justify-content: center;
+            color: blue;
+            text-align: center; 
+            text-decoration-line: underline;
+            h1{
+                text-align: center;
+                border-radius: 50%;
+                border: solid red;
+                width: 250px;
+                padding: 15px;
+            }
+        }
+        //--------------------NAVBAR
+        .navbar{
+            text-align: center;
+            nav{
+                display: flex;
+                justify-content: center;
+                background: linear-gradient(to bottom, black, grey);
+                width: 100%;
+                height: 50px;
+                align-items: center;
+                // border: solid black;
+                ul{
+                    display: flex;
+                    color: white;
+                    list-style: none;
+                    li{
+                        // border: solid rgb(158, 152, 152);
+                        margin: 5px;
+                        padding: 5px;
+                        width: 100px;
+                        height: 30px;
+                        border-radius: 3px;
+                        font-size: 20px;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        font-weight: bold;
+                    }
+                    li:hover{
+                        background-color: black;
+                    }
+                }
+            }
+            
+        }
+    }
+    //-----------------MAIN
+    main{
+        .contentImgPrincipal{
+            .textImg{
+                position: absolute;
+                text-align: center;
+                z-index: 5;
+                p{
+                    font-size: 4.5em;
+                    color: rgb(255, 230, 177);
+                    margin: 300px 250px;
+                    opacity: 0.6;
+                }
+            }
+            .imgPrincipal{
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 0%;
+                img{
+                    height: 80vh;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    //-----------------SECCTION OF PUBLICITY
+    .sectionTarjet{
+        .tarjetBox{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            // border: solid white;
+            .tarjet{
+                // border: solid white;
+                text-align: center;
+                figure{
+                    max-width: 350px;
+                    
+                    img{
+                        border: solid rgb(226, 226, 226) 7px;
+                        width: 350px;
+                        height: 350px;
+                        
+                    }
+                    figcaption{
+                        text-align: center;   
+                        margin: 10px;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+    //-------------------SECTION OF CARTS
+    .sectionCart{
+        margin-top: 20px;
+        // border: solid white;
+        .contentCart{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            // border: solid white;
+            .addCart{
+                border: solid white;
+                text-align: center;
+                max-width: 275px;
+                figure{
+                    img{
+                        width: 200px;
+                        height: 300px;
+                        margin-bottom: 20px;
+                    }
+                }
+                //---------DESCRIPTION OF PRODUCT
+                p{
+                    font-family:Georgia, 'Times New Roman', Times, serif;
+                    margin: 20px;
+                    height: 50px;
+                }
+                //-----------BUTTON OF ADD TO CART
+                button{
+                    box-shadow: 2px 2px 3px;
+                    margin-bottom: 20px;
+                    
+                }
+            }
+        }
+    }    
+    //-----------------------FOOTER
+    footer{
+        margin-top: 50px;
+        border: solid white;
+        ul{
+            list-style: none;
+            font-size: 1.2em;
+            // text-align: center;
+            li{
+                margin: 5px;
+            }
+        }
+    }        
+}
