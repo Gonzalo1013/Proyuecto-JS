@@ -33,3 +33,5 @@ const addToCart = (option, quantity) => {
         alert(`motor ${found.mark} fue agregado al carrito`);    
     }
 }
+
+

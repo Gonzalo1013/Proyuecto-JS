@@ -1,7 +1,8 @@
-body {
-    background-color: black;
-    color: white;
-    //-----------------------HEADER STYLES
+//---------------------------------------PAGE INDEX------------------
+.bodyIndex {
+        background-color: black;
+        color: white;
+        //-----------------------HEADER STYLES
     header{
         .title{
             display: flex;
@@ -33,15 +34,18 @@ body {
                     color: white;
                     list-style: none;
                     li{
-                        // border: solid rgb(158, 152, 152);
                         margin: 5px;
                         padding: 5px;
                         width: 100px;
                         height: 30px;
                         border-radius: 3px;
                         font-size: 20px;
-                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                        font-weight: bold;
+                        // font-weight: bold;
+                        .linkBar {
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            text-decoration: none;
+                            color: white;
+                        }
                     }
                     li:hover{
                         background-color: black;
@@ -152,4 +156,85 @@ body {
             }
         }
     }        
+}
+//***-------------------------------------PAGE CONTACTO--------------
+
+.bodyContacto{
+    //---------HEADER----------------
+    header{
+        background-color: black;
+        color: white;
+        .title{
+            display: flex;
+            justify-content: center;
+            color: blue;
+            text-align: center; 
+            text-decoration-line: underline;
+            h1{
+                text-align: center;
+                border-radius: 50%;
+                border: solid red;
+                width: 250px;
+                padding: 15px;
+            }
+        }
+        //--------------------NAVBAR
+        .navbar{
+            text-align: center;
+            nav{
+                display: flex;
+                justify-content: center;
+                background: linear-gradient(to bottom, black, grey);
+                width: 100%;
+                height: 50px;
+                align-items: center;
+                // border: solid black;
+                ul{
+                    display: flex;
+                    color: white;
+                    list-style: none;
+                    li{
+                        margin: 5px;
+                        padding: 5px;
+                        width: 100px;
+                        height: 30px;
+                        border-radius: 3px;
+                        font-size: 20px;
+                        // font-weight: bold;
+                        .linkBar {
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                    li:hover{
+                        background-color: black;
+                    }
+                }
+            }
+            
+        }
+    }
+    //---------FORMULARIO------------
+    .mainContacto{
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/26/Atardecer_en_la_Laguna_de_Chascom%C3%BAs.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        border: solid gray 0.1px;
+        .contentFormContact{
+            margin-top: 50px;
+            #formContact{
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+                #buttonSend{
+                    margin: auto;
+                    margin-top: 20px;
+                    max-width: 100px;
+                }
+            }
+        }
+    }
 }

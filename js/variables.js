@@ -15,3 +15,9 @@ const selectedQty = 'Indicanos la cantidad que deseas';
 let cart = 0;
 
 let resp = 's';
+
+/*VARIABLES PARA EL FORMULARIO.*/
+
+
+
+
