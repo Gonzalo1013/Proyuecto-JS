@@ -4,19 +4,23 @@
 
 do {
     let option = showMenu();
-    if (option === products.length + 1) break;
-    let qty = parseInt(prompt(selectedQty))
+    if (option === products.length +1){
+        showCart();
+    }else {
+        if (option === products.length + 2) break;
+        let qty = parseInt(prompt(selectedQty))
+        addToCart(option, qty);
+        }
+        
+        resp = prompt('Desea agregar mas productos al carrito? s/n');
 
-    addToCart(option, qty);
-    
-    resp = prompt('Desea agregar mas productos al carrito? s/n');
+}while(resp === 'S' || resp === 's');
 
-}
-while(resp === 'S' || resp === 's');
+// if(cart > 0) {
+//     alert(`Su compra tiene un valor de us$${cart}`);
+// }
+showTotal();
 
-if(cart > 0) {
-    alert(`Su compra tiene un valor de us$${cart}`);
-}
     alert('Gracias por su compra');
 
 
