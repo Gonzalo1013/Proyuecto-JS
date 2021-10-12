@@ -1,6 +1,6 @@
 
 
- alert('Bienvenidos a Motores Ferchu, esperamos poder ayudarte con lo que buscas.');
+//  alert('Bienvenidos a Motores Ferchu, esperamos poder ayudarte con lo que buscas.');
 
 do {
     let option = showMenu();

@@ -6,7 +6,7 @@ const products = JSON.parse(data);
 
 
 /*Esta funcion genera el menu dinamico en base a los profuctos existentes
-  Retorna el id de los productos elegidos*/
+    Retorna el id de los productos elegidos*/
 
 const showMenu = () =>{
     let menu = 'Elija un profucto: \n';
@@ -105,3 +105,4 @@ const showCart = () => {
         alert(dataToShow);
     }
 };
+

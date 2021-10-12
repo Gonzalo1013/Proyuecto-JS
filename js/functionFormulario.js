@@ -20,9 +20,8 @@ function textoFormulario (e) {
     // console.log(formulario.children[5].value);
     // console.log(formulario.children[7].value);
     // console.log(e);
+    
 }
-
-
 
 
 let boton = document.getElementById('buttonform');
