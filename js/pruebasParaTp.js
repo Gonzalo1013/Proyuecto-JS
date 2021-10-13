@@ -136,3 +136,67 @@ const guardarLocal = (clave , valor) => {localStorage.setItem(clave , valor)};
         document.body.appendChild(mensajeFour);
     };
 
+// const productos = [{id:1 , nombre: 'Gonzalo' , apellido: 'Arroyo'},
+// {id:2 ,  nombre: 'Pauli', apellido: 'Stessens'},
+// {id:3 ,  nombre: 'Carlos', apellido: 'Gomez'},
+// {id:4 ,  nombre: 'William', apellido: 'Perez'}
+// ];
+
+// for ( let product of productos){
+//     $("#app").append(`<div><h3> ID: ${product.id}</h3>
+//                         <p> Nombre: ${product.nombre}</p>
+//                         <p> Apellido: ${product.apellido}</p>
+//                     </div>`);
+// }
+
+$("aside").append(`<div><h3> HOLA CODERS </h3></div>`);
+
+$("body").prepend('<button class="botonPrueba">CLICK</button>');
+
+$('.botonPrueba').on('click' , function (){
+    console.log('SE HIZO CLICK');
+})
+
+$('.botonPrueba').on('dblclick' , function (){
+    console.log('se hizo doble click')
+
+})
+
+// const porongas = [{id:1 , nombre: 'Gonzalo' , precio: 100},
+// {id:2 ,  nombre: 'Pauli', precio: 200},
+// {id:3 ,  nombre: 'Carlos', precio: 150},
+// {id:4 ,  nombre: 'William', precio: 50}
+// ];
+
+    for(let prod of products){
+        $(".sectionCart").append(`<div>
+        <h3>Nombre ${prod.mark}</h3>
+        <b>Precio: $${prod.price}</b>
+        <button id="buy${prod.id}">Comprar</button>
+        </div>`);
+        
+        $(`#buy${prod.id}`).on('click', function (){
+                console.log(`Agregaste al carrito un motor ${prod.mark} modelo ${prod.model}`);
+                let transformar = JSON.stringify(prod);
+                localStorage.setItem('compraAgregada', transformar);
+        });
+    }
+
+    
+//crear funcion donde al clickear un botonm de comprar o agregasr al cart envie la info al local.  me sume cada compra que hago y muestre un alert lo que se compro y cuanto lleva gastando,
+// o mejor si a un boton mostrar carrito te da un alert donde dice que compraste y de cuianto es el gasto
+$(".sectionCart").append('<button class="showCartVer">Ver Carrito</button>');
+
+$(".showCartVer").click(function (e) {
+        console.log(`${e.target.innerHTML}`);
+        const inCart = JSON.parse(localStorage.getItem("compraAgregada"));
+
+        // localStorage.getItem(`${transformar}`)
+        // JSON.case(transformar)
+        alert(`YA CASI ES TUYO!!\n 
+        ${inCart.mark} ${inCart.model}\n
+        $${inCart.price}`);
+    });
+
+        
+    // mensajeOne.innerHTML = (`El motor ${almacenados.mark} fue gargado al carrito, su precio es de:  $${almacenados.price}`);

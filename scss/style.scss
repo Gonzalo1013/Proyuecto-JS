@@ -138,7 +138,7 @@
                         margin-bottom: 20px;
                     }
                 }
-              
+            
                 //---------DESCRIPTION OF PRODUCT
                 p{
                     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -149,9 +149,13 @@
                 button{
                     box-shadow: 2px 2px 3px;
                     margin-bottom: 20px;
-                    
                 }
             }
+        }
+        .showCartVer{
+            padding: 10px 20px;
+            background-color: rgb(46, 241, 46);
+            margin: 20px 0px 0px 200px
         }
     }    
     //-----------------------FOOTER
