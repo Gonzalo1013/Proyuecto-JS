@@ -136,67 +136,118 @@ const guardarLocal = (clave , valor) => {localStorage.setItem(clave , valor)};
         document.body.appendChild(mensajeFour);
     };
 
-// const productos = [{id:1 , nombre: 'Gonzalo' , apellido: 'Arroyo'},
-// {id:2 ,  nombre: 'Pauli', apellido: 'Stessens'},
-// {id:3 ,  nombre: 'Carlos', apellido: 'Gomez'},
-// {id:4 ,  nombre: 'William', apellido: 'Perez'}
-// ];
 
-// for ( let product of productos){
-//     $("#app").append(`<div><h3> ID: ${product.id}</h3>
-//                         <p> Nombre: ${product.nombre}</p>
-//                         <p> Apellido: ${product.apellido}</p>
-//                     </div>`);
-// }
 
-$("aside").append(`<div><h3> HOLA CODERS </h3></div>`);
+// SE CREO UN BOTON PARA PRACTICAR LO APRENDIDO.
+// $("body").prepend('<button class="botonPrueba">CLICK</button>');
+// $('.botonPrueba').on('click' , function (){
+//     console.log('SE HIZO CLICK');
+// })
+// $('.botonPrueba').on('dblclick' , function (){
+//     console.log('se hizo doble click')
+// })
 
-$("body").prepend('<button class="botonPrueba">CLICK</button>');
 
-$('.botonPrueba').on('click' , function (){
-    console.log('SE HIZO CLICK');
-})
 
-$('.botonPrueba').on('dblclick' , function (){
-    console.log('se hizo doble click')
+//CREAMOS UN CATALOGO QUE ESTA OCULTO Y AL CLICKEAR EL BOTON 'VER CATALOGO LO MUESTRA Y APARECE UN BOTON PARA OCULTARLO.'
+$(".sectionCart").append('<button id="btnMostrarCatalogo">Mostrar Catalogo</button>');
+$(".sectionCart").append('<button id="ocultarCatalogo" style="display: none">Ocultar Catalogo</button>');
 
-})
+for(let prod of products){
+        $(".mostrarCatalogo").append(`<div class="catalogo" style="display:none">
+                                        <h3>Nombre ${prod.mark}</h3>
+                                        <b>Precio: $${prod.price}</b>
+                                        <button id="buy${prod.id}">Comprar</button>
+                                        </div>`);
 
-// const porongas = [{id:1 , nombre: 'Gonzalo' , precio: 100},
-// {id:2 ,  nombre: 'Pauli', precio: 200},
-// {id:3 ,  nombre: 'Carlos', precio: 150},
-// {id:4 ,  nombre: 'William', precio: 50}
-// ];
+        $("#btnMostrarCatalogo").click (() => {
+            $(".catalogo").fadeIn(1000);
+            $("#ocultarCatalogo").slideDown("slow");
+        });
+        $("#ocultarCatalogo").click(() => {
+            $(".catalogo").fadeOut(1000);
+            $("#ocultarCatalogo").slideUp("slow");
 
-    for(let prod of products){
-        $(".sectionCart").append(`<div>
-        <h3>Nombre ${prod.mark}</h3>
-        <b>Precio: $${prod.price}</b>
-        <button id="buy${prod.id}">Comprar</button>
-        </div>`);
+        });
         
         $(`#buy${prod.id}`).on('click', function (){
-                console.log(`Agregaste al carrito un motor ${prod.mark} modelo ${prod.model}`);
-                let transformar = JSON.stringify(prod);
-                localStorage.setItem('compraAgregada', transformar);
+            console.log(`Agregaste al carrito un motor ${prod.mark} modelo ${prod.model}`);
+            let transformar = JSON.stringify(prod);
+            localStorage.setItem('compraAgregada', transformar);
         });
     }
-
     
-//crear funcion donde al clickear un botonm de comprar o agregasr al cart envie la info al local.  me sume cada compra que hago y muestre un alert lo que se compro y cuanto lleva gastando,
-// o mejor si a un boton mostrar carrito te da un alert donde dice que compraste y de cuianto es el gasto
-$(".sectionCart").append('<button class="showCartVer">Ver Carrito</button>');
+    
+    
+    //crear funcion donde al clickear un botonm de comprar o agregasr al cart envie la info al local.  me sume cada compra que hago y muestre un alert lo que se compro y cuanto lleva gastando,
+    // o mejor si a un boton mostrar carrito te da un alert donde dice que compraste y de cuianto es el gasto
+$(".mostrarCatalogo").append('<button class="showCartVer">Ver Carrito</button>');
+$(".showCartVer").css('background-color', 'grey');
+$(".showCartVer").css('padding', '10px 20px');
+$(".showCartVer").css('width', '100%');
 
 $(".showCartVer").click(function (e) {
-        console.log(`${e.target.innerHTML}`);
-        const inCart = JSON.parse(localStorage.getItem("compraAgregada"));
-
-        // localStorage.getItem(`${transformar}`)
-        // JSON.case(transformar)
+    console.log(`${e.target.innerHTML}`);
+    const inCart = JSON.parse(localStorage.getItem("compraAgregada"));
+    
+    // localStorage.getItem(`${transformar}`)
+    // JSON.case(transformar)
         alert(`YA CASI ES TUYO!!\n 
         ${inCart.mark} ${inCart.model}\n
         $${inCart.price}`);
     });
+    
+    
+    
+    
+    
+    
+    //PRACTICAMOS HACIENDO EL BOX AMARILLO
+    
+    // $(".sectionCart").prepend('<button id="btnDown">slideDown</button>');
+    // $(".sectionCart").prepend('<button id="btnUp">slideUp</button>');
+    // $(".sectionCart").prepend('<button id="btnToggle">slideToggle</button>');
+    // $(".sectionCart").prepend(`<div id="divUno" style="display: none ; background-color: yellow ; height: 150px ; width: 1000px ; color: black ; margin: auto ; text-align: center" >
+    //     <p>Hola Coders</p>
+    //     <h3>Soy el mejor</h3>
+    // </div>`);
+    
+    // $("#btnDown").click (() => {
+        //     $("#divUno").slideDown(1000);
+        // });
 
-        
-    // mensajeOne.innerHTML = (`El motor ${almacenados.mark} fue gargado al carrito, su precio es de:  $${almacenados.price}`);
+    // $("#btnUp").click (() => {
+    //     $("#divUno").slideUp(1000);
+    // });
+
+    // $("#btnToggle").click (() => {
+    //     $("#divUno").toggle(1000);
+    // });
+
+
+$("body").prepend(`<div class="animateImg" style=" display: none , background-color: yellow,">
+                    <img class="imgAnimate" style="display:none" src="https://www.pescaargentina.com.ar/imagenes/noticias_web/sgf_294-1.jpg" alt="lancha">
+                    </div>`);
+
+
+                    $(".animateImg").animate({
+                                                'padding': '50px',
+                                                'height': '200px',
+                                                'width': '50%',
+                    },
+                    "slow",
+                    function () {
+                        $(".imgAnimate").css({'background-color': 'white',
+                                                "padding": "20px",
+                                                "border-radius": "10px",
+                    })
+                                        .slideDown(2100)
+                                        .slideUp(2000);
+                        }
+                    )
+                        .slideDown(2000)
+                        .delay(4000)
+                        .slideUp(2000);
+                        
+                        console.log('fin de la animacion');
+                    
