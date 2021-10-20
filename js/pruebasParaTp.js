@@ -148,6 +148,25 @@ const guardarLocal = (clave , valor) => {localStorage.setItem(clave , valor)};
 // })
 
 
+//PRACTICAMOS HACIENDO EL BOX AMARILLO
+
+// $(".sectionCart").prepend('<button id="btnDown">slideDown</button>');
+// $(".sectionCart").prepend('<button id="btnUp">slideUp</button>');
+// $(".sectionCart").prepend('<button id="btnToggle">slideToggle</button>');
+// $(".sectionCart").prepend(`<div id="divUno" style="display: none ; background-color: yellow ; height: 150px ; width: 1000px ; color: black ; margin: auto ; text-align: center" >
+//     <p>Hola Coders</p>
+//     <h3>Soy el mejor</h3>
+// </div>`);
+// $("#btnDown").click (() => {
+    //     $("#divUno").slideDown(1000);
+    // });
+// $("#btnUp").click (() => {
+//     $("#divUno").slideUp(1000);
+// });
+// $("#btnToggle").click (() => {
+//     $("#divUno").toggle(1000);
+// });
+
 
 //CREAMOS UN CATALOGO QUE ESTA OCULTO Y AL CLICKEAR EL BOTON 'VER CATALOGO LO MUESTRA Y APARECE UN BOTON PARA OCULTARLO.'
 $(".sectionCart").append('<button id="btnMostrarCatalogo">Mostrar Catalogo</button>');
@@ -202,27 +221,6 @@ $(".showCartVer").click(function (e) {
     
     
     
-    //PRACTICAMOS HACIENDO EL BOX AMARILLO
-    
-    // $(".sectionCart").prepend('<button id="btnDown">slideDown</button>');
-    // $(".sectionCart").prepend('<button id="btnUp">slideUp</button>');
-    // $(".sectionCart").prepend('<button id="btnToggle">slideToggle</button>');
-    // $(".sectionCart").prepend(`<div id="divUno" style="display: none ; background-color: yellow ; height: 150px ; width: 1000px ; color: black ; margin: auto ; text-align: center" >
-    //     <p>Hola Coders</p>
-    //     <h3>Soy el mejor</h3>
-    // </div>`);
-    
-    // $("#btnDown").click (() => {
-        //     $("#divUno").slideDown(1000);
-        // });
-
-    // $("#btnUp").click (() => {
-    //     $("#divUno").slideUp(1000);
-    // });
-
-    // $("#btnToggle").click (() => {
-    //     $("#divUno").toggle(1000);
-    // });
 
 
 $("body").prepend(`<div class="animateImg" style=" display: none , background-color: yellow,">
