@@ -221,31 +221,52 @@ $(".showCartVer").click(function (e) {
     
     
     
+//ANIMACION
+
+// $("body").prepend(`<div class="animateImg" style=" display: none , background-color: yellow,">
+//                     <img class="imgAnimate" style="display:none" src="https://www.pescaargentina.com.ar/imagenes/noticias_web/sgf_294-1.jpg" alt="lancha">
+//                     </div>`);
 
 
-$("body").prepend(`<div class="animateImg" style=" display: none , background-color: yellow,">
-                    <img class="imgAnimate" style="display:none" src="https://www.pescaargentina.com.ar/imagenes/noticias_web/sgf_294-1.jpg" alt="lancha">
-                    </div>`);
-
-
-                    $(".animateImg").animate({
-                                                'padding': '50px',
-                                                'height': '200px',
-                                                'width': '50%',
-                    },
-                    "slow",
-                    function () {
-                        $(".imgAnimate").css({'background-color': 'white',
-                                                "padding": "20px",
-                                                "border-radius": "10px",
-                    })
-                                        .slideDown(2100)
-                                        .slideUp(2000);
-                        }
-                    )
-                        .slideDown(2000)
-                        .delay(4000)
-                        .slideUp(2000);
+//                     $(".animateImg").animate({
+//                                                 'padding': '50px',
+//                                                 'height': '200px',
+//                                                 'width': '50%',
+//                     },
+//                     "slow",
+//                     function () {
+//                         $(".imgAnimate").css({'background-color': 'white',
+//                                                 "padding": "20px",
+//                                                 "border-radius": "10px",
+//                     })
+//                                         .slideDown(2100)
+//                                         .slideUp(2000);
+//                         }
+//                     )
+//                         .slideDown(2000)
+//                         .delay(4000)
+//                         .slideUp(2000);
                         
-                        console.log('fin de la animacion');
-                    
+//                         console.log('fin de la animacion');
+
+
+            //ajax get
+const URL = "http://hp-api.herokuapp.com/api/characters"
+
+$(".contentList").append(`<button id="users">Personajes de Harry</button>`);
+    
+    $("#users").click(() => {
+        $.get(`${URL}/students` , function (res, state) {
+            if(state === "success") {
+                console.log(res);
+                for (const {name, gender, house} of res) {
+                    $(".harry").append(`
+                                        <div class= "card">
+                                            <div class="sizeName">${name}</div>
+                                            <div>${gender}</div>
+                                            <div>${house}</div> 
+                                        </div>`);
+                }
+            }
+        });
+    });

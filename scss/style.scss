@@ -170,7 +170,29 @@
                 margin: 5px;
             }
         }
-    }       
+    }
+    
+    //lista de personajes de harry potter
+    .contentList{
+        .harry{
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+            .card{
+                width: 150px;
+                height: 100px;
+                background-color: lightblue;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 10px;
+                padding-top: 10px;
+                border-radius: 10px;
+                .sizeName{
+                    font-size: 1.1em;
+                    color: black
+                }
+            }
+        }
+    }
 }
 //***-------------------------------------PAGE CONTACTO--------------
 
@@ -250,6 +272,96 @@
                     max-width: 100px;
                 }
             }
+        }
+    }
+}
+
+.bodyProductos{
+    //---------HEADER----------------
+        header{
+        background-color: black;
+        color: white;
+        .title{
+            display: flex;
+            justify-content: center;
+            color: blue;
+            text-align: center; 
+            text-decoration-line: underline;
+            h1{
+                text-align: center;
+                border-radius: 50%;
+                border: solid red;
+                width: 250px;
+                padding: 15px;
+            }
+        }
+    }
+    //--------------------NAVBAR
+    .navbar{
+        text-align: center;
+        nav{
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to bottom, black, grey);
+            width: 100%;
+            height: 50px;
+            align-items: center;
+            // border: solid black;
+            ul{
+                display: flex;
+                color: white;
+                list-style: none;
+                li{
+                    margin: 5px;
+                    padding: 5px;
+                    width: 100px;
+                    height: 30px;
+                    border-radius: 3px;
+                    font-size: 20px;
+                    // font-weight: bold;
+                    .linkBar {
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+                li:hover{
+                    background-color: black;
+                }
+            }
+        }
+    }
+}
+
+.contentListHarry{
+    .harrysList{
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        .card{
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            padding-top: 10px;
+            border-radius: 10px;
+            .sizeName{
+                font-size: 1.1em;
+                color: black
+            }
+        }
+    }
+    .postStudents{
+        text-align: center;
+        margin: 20px;
+        .textPost{
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 2px;
+            text-decoration: underline;
+            font-weight: bold;
+            color:rgb(8, 71, 13)
         }
     }
 }
