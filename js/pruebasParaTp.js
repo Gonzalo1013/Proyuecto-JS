@@ -150,22 +150,22 @@ const guardarLocal = (clave , valor) => {localStorage.setItem(clave , valor)};
 
 //PRACTICAMOS HACIENDO EL BOX AMARILLO
 
-// $(".sectionCart").prepend('<button id="btnDown">slideDown</button>');
-// $(".sectionCart").prepend('<button id="btnUp">slideUp</button>');
-// $(".sectionCart").prepend('<button id="btnToggle">slideToggle</button>');
-// $(".sectionCart").prepend(`<div id="divUno" style="display: none ; background-color: yellow ; height: 150px ; width: 1000px ; color: black ; margin: auto ; text-align: center" >
-//     <p>Hola Coders</p>
-//     <h3>Soy el mejor</h3>
-// </div>`);
-// $("#btnDown").click (() => {
-    //     $("#divUno").slideDown(1000);
-    // });
-// $("#btnUp").click (() => {
-//     $("#divUno").slideUp(1000);
-// });
-// $("#btnToggle").click (() => {
-//     $("#divUno").toggle(1000);
-// });
+$(".sectionCart").prepend('<button id="btnDown">slideDown</button>');
+$(".sectionCart").prepend('<button id="btnUp">slideUp</button>');
+$(".sectionCart").prepend('<button id="btnToggle">slideToggle</button>');
+$(".sectionCart").prepend(`<div id="divUno" style="display: none ; background-color: yellow ; height: 150px ; width: 1000px ; color: black ; margin: auto ; text-align: center" >
+    <p>Hola Coders</p>
+    <h3>Soy el mejor</h3>
+</div>`);
+$("#btnDown").click (() => {
+        $("#divUno").slideDown(1000);
+    });
+$("#btnUp").click (() => {
+    $("#divUno").slideUp(1000);
+});
+$("#btnToggle").click (() => {
+    $("#divUno").toggle(1000);
+});
 
 
 //CREAMOS UN CATALOGO QUE ESTA OCULTO Y AL CLICKEAR EL BOTON 'VER CATALOGO LO MUESTRA Y APARECE UN BOTON PARA OCULTARLO.'
@@ -177,7 +177,7 @@ for(let prod of products){
                                         <h3>Nombre ${prod.mark}</h3>
                                         <b>Precio: $${prod.price}</b>
                                         <button id="buy${prod.id}">Comprar</button>
-                                        </div>`);
+                                    </div>`);
 
         $("#btnMostrarCatalogo").click (() => {
             $(".catalogo").fadeIn(1000);
@@ -223,31 +223,31 @@ $(".showCartVer").click(function (e) {
     
 //ANIMACION
 
-// $("body").prepend(`<div class="animateImg" style=" display: none , background-color: yellow,">
-//                     <img class="imgAnimate" style="display:none" src="https://www.pescaargentina.com.ar/imagenes/noticias_web/sgf_294-1.jpg" alt="lancha">
-//                     </div>`);
+$("body").prepend(`<div class="animateImg" style=" display: none , background-color: yellow,">
+                    <img class="imgAnimate" style="display:none" src="https://www.pescaargentina.com.ar/imagenes/noticias_web/sgf_294-1.jpg" alt="lancha">
+                    </div>`);
 
 
-//                     $(".animateImg").animate({
-//                                                 'padding': '50px',
-//                                                 'height': '200px',
-//                                                 'width': '50%',
-//                     },
-//                     "slow",
-//                     function () {
-//                         $(".imgAnimate").css({'background-color': 'white',
-//                                                 "padding": "20px",
-//                                                 "border-radius": "10px",
-//                     })
-//                                         .slideDown(2100)
-//                                         .slideUp(2000);
-//                         }
-//                     )
-//                         .slideDown(2000)
-//                         .delay(4000)
-//                         .slideUp(2000);
+                    $(".animateImg").animate({
+                                                'padding': '50px',
+                                                'height': '200px',
+                                                'width': '50%',
+                    },
+                    "slow",
+                    function () {
+                        $(".imgAnimate").css({'background-color': 'white',
+                                                "padding": "20px",
+                                                "border-radius": "10px",
+                    })
+                                        .slideDown(2100)
+                                        .slideUp(2000);
+                        }
+                    )
+                        .slideDown(2000)
+                        .delay(4000)
+                        .slideUp(2000);
                         
-//                         console.log('fin de la animacion');
+                        console.log('fin de la animacion');
 
 
             //ajax get

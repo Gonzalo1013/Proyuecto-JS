@@ -5,9 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="icon" href="#" type="image/x-icon">
 </head>
-<body class="bodyProductos">
+<body class="bodyProductos hidden">
+    <!--PRELOAD-->
+    <div class="load" id="onload">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <!--In the header you can find the navbar and logo-->
     <header>
         <div class="title">
@@ -16,19 +28,23 @@
         <div class="navbar">
             <nav>
                 <ul>
-                    <li><a href="" class="linkBar">Inicio</a></li>
+                    <li><a href="../index.html" class="linkBar">Inicio</a></li>
                     <li><a href="/pages/productos.html" class="linkBar">Productos</a></li>
                     <li><a href="/pages/formContacto.html" class="linkBar">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="contentListHarry">
-        <div class="harrysList"></div>
-        <div class="postStudents"></div>
-    </div>
+<!--Catalogo de compras.-->
+<main class="mainProducts" id="asdasd">
+    <div class="contentCatalogos"></div>
+    <div class="respuestaDeLaCompra"></div>
+    <div id="primero" class="catalogoTodo"></div>
+</main>
+
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/data.js"></script>
     <script src="../js/variables.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

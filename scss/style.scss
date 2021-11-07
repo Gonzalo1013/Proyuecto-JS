@@ -1,7 +1,49 @@
 //---------------------------------------PAGE INDEX------------------
+.hidden{
+    overflow: hidden;
+}
 .bodyIndex {
         background-color: black;
         color: white;
+        //-------------STYLE FOR PRELOAD
+        .load{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .lds-ripple {
+                display: inline-block;
+                position: relative;
+                width: 80px;
+                height: 80px;
+            }
+            .lds-ripple div {
+                position: absolute;
+                border: 4px solid #fff;
+                opacity: 1;
+                border-radius: 50%;
+                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+            }
+            .lds-ripple div:nth-child(2) {
+                animation-delay: -0.5s;
+            }
+            @keyframes lds-ripple {
+                0% {
+                top: 36px;
+                left: 36px;
+                width: 0;
+                height: 0;
+                opacity: 1;
+                }
+                100% {
+                top: 0px;
+                left: 0px;
+                width: 72px;
+                height: 72px;
+                opacity: 0;
+                }
+            }
+        }
         //-----------------------HEADER STYLES
     header{
         .title{
@@ -80,14 +122,43 @@
             }
         }
     }
-    //-----------------BOTON
-    .contentButtonBuscarMotor{
-        text-align: center;
-        .buscarMotor{
-            width: 1000px;
-            padding: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
+    //-----------------API Dolar
+    .cotizacionDolar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0px;
+        .contentDolar{
+            background-color: rgb(112, 155, 112);
+            border: solid white;
+            margin: 5px;
+            border-radius: 5px;
+            color: black;
+            h3{
+                text-align: center;
+                background-color: rgb(43, 77, 43);
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 5px;
+                margin-top: 0px;
+                border-radius: 5px;
+            }
+            .contentPrice{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                p{
+                    font-weight: bold;
+                    margin: 5px;
+                    b{
+                        font-size: 2em;
+                    }
+                }
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+            }
         }
     }
     //-----------------SECCTION OF PUBLICITY
@@ -152,11 +223,6 @@
                 }
             }
         }
-        // .showCartVer{
-        //     padding: 10px 20px;
-        //     background-color: rgb(46, 241, 46);
-        //     margin: 20px 0px 0px 200px
-        // }
     }    
     //-----------------------FOOTER
     footer{
@@ -173,8 +239,8 @@
     }
     
     //lista de personajes de harry potter
-    .contentList{
-        .harry{
+    .contentListHarry{
+        .harrysList{
             display: flex;
             flex-flow: row wrap;
             text-align: center;
@@ -273,10 +339,78 @@
                 }
             }
         }
+        .card{
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            .ocultar{
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 3px;
+            }
+            h4{
+                margin-top: 20px;
+            }
+        }
+    }
+    footer{
+        background-color: black;
+        // margin-top: 50px;
+        border: solid white;
+        ul{
+            list-style: none;
+            font-size: 1.2em;
+            color: white;
+            // text-align: center;
+            li{
+                margin: 5px;
+            }
+        }
     }
 }
-
+//----------------------------------------PAGE PRODUCTOS---------------
 .bodyProductos{
+    background-color: black;
+    //-------------STYLE FOR PRELOAD
+    .load{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .lds-ripple {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+        .lds-ripple div {
+            position: absolute;
+            border: 4px solid #fff;
+            opacity: 1;
+            border-radius: 50%;
+            animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        .lds-ripple div:nth-child(2) {
+            animation-delay: -0.5s;
+        }
+        @keyframes lds-ripple {
+            0% {
+            top: 36px;
+            left: 36px;
+            width: 0;
+            height: 0;
+            opacity: 1;
+            }
+            100% {
+            top: 0px;
+            left: 0px;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+            }
+        }
+    }
     //---------HEADER----------------
         header{
         background-color: black;
@@ -295,7 +429,7 @@
                 padding: 15px;
             }
         }
-    }
+    
     //--------------------NAVBAR
     .navbar{
         text-align: center;
@@ -332,36 +466,122 @@
         }
     }
 }
-
-.contentListHarry{
-    .harrysList{
-        display: flex;
-        flex-flow: row wrap;
-        text-align: center;
-        .card{
-            width: 150px;
-            height: 100px;
-            background-color: lightblue;
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 10px;
-            padding-top: 10px;
-            border-radius: 10px;
-            .sizeName{
-                font-size: 1.1em;
-                color: black
+    .mainProducts{
+        .catalogoTodo{
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+            justify-content: center ;
+            .cart{
+                width: 200px;
+                height: 350px;
+                background-color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 10px;
+                padding-top: 10px;
+                h3{
+                    margin: 3px;
+                }
+                p{
+                    margin: 3px;
+                }
+                .imgCard{
+                    width: 75%;
+                    height: 50%;
+                }
+            }
+            .styleShowCart{
+                display: flex;
+                flex-direction: column;
+                background-color: brown;
+                position: absolute;
+                align-items: center;
+                border: white solid;
+                .imgShowCart{
+                    width: 300px;
+                    height: 350px;
+                }
+                .ocultar{
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    right: 5px;
+                    top: 5px
+                }
+                p{
+                    max-width: 250px;
+                }
+            }
+        }
+        .respuestaDeLaCompra{
+            p{
+                text-align: center;
+                color: rgb(0, 0, 255);
+                font-size: 2em;
+            }
+            .addTextDelate{
+                text-align: center;
+                color: red;
+                font-size: 1.5em;
             }
         }
     }
-    .postStudents{
-        text-align: center;
-        margin: 20px;
-        .textPost{
-            font-size: 2em;
-            font-family: Arial, Helvetica, sans-serif;
-            letter-spacing: 2px;
-            text-decoration: underline;
-            font-weight: bold;
-            color:rgb(8, 71, 13)
+}
+
+//-------------------------------PAGE SHOWCART
+
+.bodyShowCart{
+    header{
+        background-color: black;
+        color: white;
+        .title{
+            display: flex;
+            justify-content: center;
+            color: blue;
+            text-align: center; 
+            text-decoration-line: underline;
+            h1{
+                text-align: center;
+                border-radius: 50%;
+                border: solid red;
+                width: 250px;
+                padding: 15px;
+            }
         }
+        //--------------------NAVBAR
+        .navbar{
+            text-align: center;
+            nav{
+                display: flex;
+                justify-content: center;
+                background: linear-gradient(to bottom, black, grey);
+                width: 100%;
+                height: 50px;
+                align-items: center;
+                // border: solid black;
+                ul{
+                    display: flex;
+                    color: white;
+                    list-style: none;
+                    li{
+                        margin: 5px;
+                        padding: 5px;
+                        width: 100px;
+                        height: 30px;
+                        border-radius: 3px;
+                        font-size: 20px;
+                        // font-weight: bold;
+                        .linkBar {
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                    li:hover{
+                        background-color: black;
+                    }
+                }
+            }
+        }   
     }
 }

@@ -1,6 +1,53 @@
+.hidden {
+  overflow: hidden;
+}
+
 .bodyIndex {
   background-color: black;
   color: white;
+}
+
+.bodyIndex .load {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyIndex .load .lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.bodyIndex .load .lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.bodyIndex .load .lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
 }
 
 .bodyIndex header .title {
@@ -81,15 +128,49 @@
   width: 100%;
 }
 
-.bodyIndex .contentButtonBuscarMotor {
-  text-align: center;
+.bodyIndex .cotizacionDolar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
 }
 
-.bodyIndex .contentButtonBuscarMotor .buscarMotor {
-  width: 1000px;
-  padding: 10px;
+.bodyIndex .cotizacionDolar .contentDolar {
+  background-color: #709b70;
+  border: solid white;
+  margin: 5px;
+  border-radius: 5px;
+  color: black;
+}
+
+.bodyIndex .cotizacionDolar .contentDolar h3 {
+  text-align: center;
+  background-color: #2b4d2b;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  margin-top: 0px;
+  border-radius: 5px;
+}
+
+.bodyIndex .cotizacionDolar .contentDolar .contentPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bodyIndex .cotizacionDolar .contentDolar .contentPrice p {
   font-weight: bold;
+  margin: 5px;
+}
+
+.bodyIndex .cotizacionDolar .contentDolar .contentPrice p b {
+  font-size: 2em;
+}
+
+.bodyIndex .cotizacionDolar .contentDolar p {
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 .bodyIndex .sectionTarjet .tarjetBox {
@@ -165,13 +246,13 @@
   margin: 5px;
 }
 
-.bodyIndex .contentList .harry {
+.bodyIndex .contentListHarry .harrysList {
   display: flex;
   flex-flow: row wrap;
   text-align: center;
 }
 
-.bodyIndex .contentList .harry .card {
+.bodyIndex .contentListHarry .harrysList .card {
   width: 150px;
   height: 100px;
   background-color: lightblue;
@@ -181,7 +262,7 @@
   border-radius: 10px;
 }
 
-.bodyIndex .contentList .harry .card .sizeName {
+.bodyIndex .contentListHarry .harrysList .card .sizeName {
   font-size: 1.1em;
   color: black;
 }
@@ -270,6 +351,85 @@
   max-width: 100px;
 }
 
+.bodyContacto .mainContacto .card {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+
+.bodyContacto .mainContacto .card .ocultar {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 3px;
+}
+
+.bodyContacto .mainContacto .card h4 {
+  margin-top: 20px;
+}
+
+.bodyContacto footer {
+  background-color: black;
+  border: solid white;
+}
+
+.bodyContacto footer ul {
+  list-style: none;
+  font-size: 1.2em;
+  color: white;
+}
+
+.bodyContacto footer ul li {
+  margin: 5px;
+}
+
+.bodyProductos {
+  background-color: black;
+}
+
+.bodyProductos .load {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyProductos .load .lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.bodyProductos .load .lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.bodyProductos .load .lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
 .bodyProductos header {
   background-color: black;
   color: white;
@@ -291,11 +451,11 @@
   padding: 15px;
 }
 
-.bodyProductos .navbar {
+.bodyProductos header .navbar {
   text-align: center;
 }
 
-.bodyProductos .navbar nav {
+.bodyProductos header .navbar nav {
   display: flex;
   justify-content: center;
   background: linear-gradient(to bottom, black, grey);
@@ -304,13 +464,13 @@
   align-items: center;
 }
 
-.bodyProductos .navbar nav ul {
+.bodyProductos header .navbar nav ul {
   display: flex;
   color: white;
   list-style: none;
 }
 
-.bodyProductos .navbar nav ul li {
+.bodyProductos header .navbar nav ul li {
   margin: 5px;
   padding: 5px;
   width: 100px;
@@ -319,48 +479,139 @@
   font-size: 20px;
 }
 
-.bodyProductos .navbar nav ul li .linkBar {
+.bodyProductos header .navbar nav ul li .linkBar {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
   color: white;
 }
 
-.bodyProductos .navbar nav ul li:hover {
+.bodyProductos header .navbar nav ul li:hover {
   background-color: black;
 }
 
-.contentListHarry .harrysList {
+.bodyProductos .mainProducts .catalogoTodo {
   display: flex;
   flex-flow: row wrap;
   text-align: center;
+  justify-content: center;
 }
 
-.contentListHarry .harrysList .card {
-  width: 150px;
-  height: 100px;
-  background-color: lightblue;
+.bodyProductos .mainProducts .catalogoTodo .cart {
+  width: 200px;
+  height: 350px;
+  background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px;
   padding-top: 10px;
-  border-radius: 10px;
 }
 
-.contentListHarry .harrysList .card .sizeName {
-  font-size: 1.1em;
-  color: black;
+.bodyProductos .mainProducts .catalogoTodo .cart h3 {
+  margin: 3px;
 }
 
-.contentListHarry .postStudents {
+.bodyProductos .mainProducts .catalogoTodo .cart p {
+  margin: 3px;
+}
+
+.bodyProductos .mainProducts .catalogoTodo .cart .imgCard {
+  width: 75%;
+  height: 50%;
+}
+
+.bodyProductos .mainProducts .catalogoTodo .styleShowCart {
+  display: flex;
+  flex-direction: column;
+  background-color: brown;
+  position: absolute;
+  align-items: center;
+  border: white solid;
+}
+
+.bodyProductos .mainProducts .catalogoTodo .styleShowCart .imgShowCart {
+  width: 300px;
+  height: 350px;
+}
+
+.bodyProductos .mainProducts .catalogoTodo .styleShowCart .ocultar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  top: 5px;
+}
+
+.bodyProductos .mainProducts .catalogoTodo .styleShowCart p {
+  max-width: 250px;
+}
+
+.bodyProductos .mainProducts .respuestaDeLaCompra p {
   text-align: center;
-  margin: 20px;
+  color: blue;
+  font-size: 2em;
 }
 
-.contentListHarry .postStudents .textPost {
-  font-size: 2em;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 2px;
-  text-decoration: underline;
-  font-weight: bold;
-  color: #08470d;
+.bodyProductos .mainProducts .respuestaDeLaCompra .addTextDelate {
+  text-align: center;
+  color: red;
+  font-size: 1.5em;
+}
+
+.bodyShowCart header {
+  background-color: black;
+  color: white;
+}
+
+.bodyShowCart header .title {
+  display: flex;
+  justify-content: center;
+  color: blue;
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+.bodyShowCart header .title h1 {
+  text-align: center;
+  border-radius: 50%;
+  border: solid red;
+  width: 250px;
+  padding: 15px;
+}
+
+.bodyShowCart header .navbar {
+  text-align: center;
+}
+
+.bodyShowCart header .navbar nav {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, black, grey);
+  width: 100%;
+  height: 50px;
+  align-items: center;
+}
+
+.bodyShowCart header .navbar nav ul {
+  display: flex;
+  color: white;
+  list-style: none;
+}
+
+.bodyShowCart header .navbar nav ul li {
+  margin: 5px;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.bodyShowCart header .navbar nav ul li .linkBar {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.bodyShowCart header .navbar nav ul li:hover {
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
